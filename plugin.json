@@ -1,0 +1,42 @@
+{
+  "id": "tavily_search_simple",
+  "uuid": "11111111-2222-3333-4444-555555555555",
+  "title": "Tavily Search Simple",
+  "emoji": "🌐",
+  "implementationType": "javascript",
+  "outputType": "respond_to_ai",
+  "authenticationType": "AUTH_TYPE_NONE",
+  "userSettings": [
+    {
+      "name": "tavilyAPIKey",
+      "type": "password",
+      "label": "Tavily API Key",
+      "required": true,
+      "description": "Your Tavily API key. Get one at https://tavily.com"
+    },
+    {
+      "name": "max_results",
+      "type": "number",
+      "label": "Maximum Results",
+      "minimum": 1,
+      "maximum": 10,
+      "defaultValue": 5,
+      "description": "Maximum number of results to return."
+    }
+  ],
+  "openaiSpec": {
+    "name": "tavily_search_simple",
+    "description": "Search the web using Tavily and return recent relevant results.",
+    "parameters": {
+      "type": "object",
+      "required": ["query"],
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "The search query."
+        }
+      }
+    }
+  },
+  "overviewMarkdown": "## Tavily Search Simple\n\nA minimal Tavily plugin for testing tool-calling compatibility with Kimi on Fireworks."
+}
