@@ -35,4 +35,3 @@ async function tavily_search_simple(params, userSettings) {
     }))
   }, null, 2);
 }
-``
